@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif; 
+}
+
+body{
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2.2rem;
+    color: #343a40;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 100px));
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial-card{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0,0.1);
+    text-align: center;
+    flex: 1 1 300px; /* Seria o flex-grow:1;, flex-shrink: 1; e flex-basis:300px; */
+    max-width: 350px;
+    transition: background-color 0.5s ease;
+}
+
+.testimonial-avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #e9ecef;
+}
+
+.testimonial-quote{ /* <cite> tag semantica para o autor da citação */
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+.testimonial-author{
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-style: normal; /* remove o itálico que é padrao do cite */
+    color: #495057;
+}
+
+.testimonial-role{
+    font-size: 0.9rem;
+    color: #adb5bd;
+    margin-top: 5px;
+}
+
+.testimonial-card:hover{
+    background-color: #343a40;
+
+    & .testimonial-quote, .testimonial-author, .testimonial-role{
+        color: #e9ecef;
+    }
+}
